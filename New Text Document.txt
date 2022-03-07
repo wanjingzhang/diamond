@@ -1,0 +1,167 @@
+uni-app
+- static 下面的es6不会被解析
+- manifest.json 应用配置文件
+- pages.json 全局配置。 pages globalStyle tabbar
+- uni.scss 样式色彩
+- App.vue 整个生命周期
+- main.js 入口 导入整个组件
+
+规范
+- SFC Vue单文件组件规范 template script style
+- 把wx替换成uni
+- 多端运行 建议flex布局
+- 资源路径 绝对路径  
+    - <image class='logo' src='@/static/logo.png'></image>
+    - import add from '@/common/add.js'
+    - @import url('@/common/uni.css'
+    - background-image: url(@/static/logo.png)
+- 不使用div，推荐使用view组件
+
+跳转
+- 编程式跳转 uni.navigateTo({url})
+- 组件式的导航<navigator url='/pages/404/404'></navigator>
+
+获取当前页面栈
+- getCurrentPages() 获取当前栈的实例
+- onLoad:function(option){option.name} 接受参数
+
+路由分包
+- 主包 pages下面，小程序下载就自动下载
+- 分包 当用户进入分包页面，小程序按需下载
+  subPackages[{}]
+
+uni-app 的js代码
+- h5 端运行在浏览器中
+- Android 平台运行在v8引擎中
+- iOS 平台运行在自带的jscore引擎中
+
+发起网络请求 有些小程序API需要配置白名单
+- uni.request()
+
+存储
+- storage
+
+组件通信
+- 局部导入
+    - import Child from '@/components/child.vue' 导入
+    - components:{Child},
+    - <child msg="爸爸的话"></child>传值给子组件
+    - <child :msg="title" @childEvent="sayHello">子组件调用父组件
+    - this.$emit('childEvent');子组件触发
+ 
+- 全局导入
+    - uni.$on('getInfo',(name)=>{ }) 监听全局的自定义事件
+    - uni.$emit('getInfo','abc') 调用全局事件
+
+- vuex
+    - State 存储状态数据
+    - Getter State的计算属性
+    - Mutation 同步方法 改变状态
+    - Action 异步方法
+    - Module 模块化
+
+环境
+    - process.env.NODE_ENV 判断当前的环境
+
+平台
+    - 注释的条件编译:注释断言采用的C语言的方式  不会被编译到代码中
+      // #ifdef H5
+      // #endif
+        - #ifdef: if defined仅在某平台存在
+        - #ifndef: if not defined 除了某平台均存在
+        - %PLATFORM%: 平台名称['APP-PLUS','H5','MP-WEIXIN']
+    - 运行期判断 会被编译
+      uni.getSystemInfoSync().platform 
+
+安装包
+    - npm install uview-ui
+    - import uView from 'uview-ui'; Vue.use(uView);
+    - 引入基础样式 
+        - App.vue @import "uview-ui/index.scss";
+        - uni.scss 引入全局scss变量文件 @import "uview-ui/theme.scss"
+        - pages.json 配置easycom规则(按需引入) 
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2022/2/14 taro
+全局的数据存储
+全局的JS&API访问 1
+全局的样式配置
+全屏样式缩放  rem
+全局图片存放地址 1
+import bg_index from '../../assets/images/bg_index.jpg' 
+
+头部组件 1
+授权组件 
+loading组件
+
+按钮事件
+获取页面参数 option
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2022/01/22
+流程，
+分享，1
+跳转小程序，1
+接口，
+每天一个小红点，
+
+签到 
+排行榜 1
+
+视频不要放大显示
+助力 视频报错
+
+2022/01/24
+1、视频内联播放 1
+2、首页初次未授权是否可以正常点活动规则 排行榜  【这个昨天改过了 应该是好的 需要验证一下】 1
+3、加油站视频点击报错 1
+4、接口加密 
+5、游戏金币得分 是否正常 翻倍是否正确（页面ui同步更新）
+6、整个流程测试是否通畅 
+7、分享好友助力（如果小程序已经打开的情况 会助力有问题） 13159 
+8、埋点
+
+
+full 会裁切
+noborder 有白边
+
+
+以左上角定位，在页面底部添加一个盒子用来动态计算视频实际的大小 
+
+
+
