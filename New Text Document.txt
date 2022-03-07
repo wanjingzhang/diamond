@@ -1,3 +1,4 @@
+2022/3/4
 uni-app
 - static 下面的es6不会被解析
 - manifest.json 应用配置文件
