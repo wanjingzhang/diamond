@@ -82,6 +82,7 @@ uni-app 的js代码
         - uni.scss 引入全局scss变量文件 @import "uview-ui/theme.scss"
         - pages.json 配置easycom规则(按需引入) 
 
+2022/4/2
 瀑布流 
   - CSS，用于静态展示。
   性能高于js，体验较差(删除元素时，内容错乱)。
