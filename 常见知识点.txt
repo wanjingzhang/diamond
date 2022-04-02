@@ -81,88 +81,29 @@ uni-app 的js代码
         - App.vue @import "uview-ui/index.scss";
         - uni.scss 引入全局scss变量文件 @import "uview-ui/theme.scss"
         - pages.json 配置easycom规则(按需引入) 
-    
 
+瀑布流 
+  - CSS，用于静态展示。
+  性能高于js，体验较差(删除元素时，内容错乱)。
+  .waterfall{
+    width:80%;
+    margin:0 auto;
+    column-gap:10px; /*瀑布流容器的间距*/
+    colum-count:2;/*瀑布容器内排列的列数*/
+  }
+  .item{
+    padding:10px;
+    margin-bottom:10px; /*插入任何中断（页面，列或区域）*/
+    break-inside:avoid;
+  }
+  - u-waterfall组件
 
+scroll-view
 
+.editorconfig 统一代码风格
 
+px自动转upx
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-2022/2/14 taro
-全局的数据存储
-全局的JS&API访问 1
-全局的样式配置
-全屏样式缩放  rem
-全局图片存放地址 1
-import bg_index from '../../assets/images/bg_index.jpg' 
-
-头部组件 1
-授权组件 
-loading组件
-
-按钮事件
-获取页面参数 option
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-2022/01/22
-流程，
-分享，1
-跳转小程序，1
-接口，
-每天一个小红点，
-
-签到 
-排行榜 1
-
-视频不要放大显示
-助力 视频报错
-
-2022/01/24
-1、视频内联播放 1
-2、首页初次未授权是否可以正常点活动规则 排行榜  【这个昨天改过了 应该是好的 需要验证一下】 1
-3、加油站视频点击报错 1
-4、接口加密 
-5、游戏金币得分 是否正常 翻倍是否正确（页面ui同步更新）
-6、整个流程测试是否通畅 
-7、分享好友助力（如果小程序已经打开的情况 会助力有问题） 13159 
-8、埋点
-
-
-full 会裁切
-noborder 有白边
-
-
-以左上角定位，在页面底部添加一个盒子用来动态计算视频实际的大小 
 
 
 
