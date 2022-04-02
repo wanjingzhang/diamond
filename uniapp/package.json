@@ -1,0 +1,25 @@
+{
+  "name": "uniapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "lint": "vue-cli-service lint",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "uview-ui": "^2.0.29"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-eslint": "^4.0.4",
+    "@vue/eslint-config-standard": "^4.0.0",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.16.0",
+    "eslint-plugin-html": "^5.0.0",
+    "eslint-plugin-prettier-vue": "^3.1.0",
+    "eslint-plugin-vue": "^5.2.3"
+  }
+}
