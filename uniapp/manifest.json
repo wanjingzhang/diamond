@@ -55,8 +55,8 @@
             "sdkConfigs" : {
                 "oauth" : {
                     "weixin" : {
-                        "appid" : "wx8c0a900c0d3e5cc0",
-                        "appsecret" : "329754ec4ed759a91562ccd21c2bbd42",
+                        "appid" : "",
+                        "appsecret" : "",
                         "UniversalLinks" : ""
                     },
                     "google" : {
@@ -70,7 +70,7 @@
     "quickapp" : {},
     /* 小程序特有相关 */
     "mp-weixin" : {
-        "appid" : "wx8c0a900c0d3e5cc0",
+        "appid" : "",
         "setting" : {
             "urlCheck" : false,
             "es6" : true
